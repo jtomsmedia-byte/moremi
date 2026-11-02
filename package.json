@@ -1,0 +1,36 @@
+{
+  "name": "moremi",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "check": "tsc --noEmit",
+    "setup": "node scripts/setup.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.15",
+    "@tailwindcss/postcss": "^4.3.3",
+    "lucide-react": "^1.66.0",
+    "next": "^16.4.3",
+    "nodemailer": "^10.3.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
