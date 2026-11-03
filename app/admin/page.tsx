@@ -7,7 +7,7 @@ export const metadata = {
   manifest: "/member/manifest.webmanifest",
 };
 export default async function Page() {
-  const u = identity((await cookies()).get("moremi")?.value);
+ const u = await identity((await cookies()).get("moremi")?.value);
   if (!u) redirect("/activate");
   if ((u.role === "admin") !== true)
     redirect(u.role === "admin" ? "/admin" : "/member");

@@ -77,7 +77,8 @@ async function upload(req: NextRequest, db: any) {
   if (new Uint8Array(bytes).subarray(0, 5).toString() !== "%PDF-") reject(400, "A PDF is required.");
   
   const key = token();
-  const { env } = getCloudflareContext();
+  // FIX: Added type cast here
+  const { env } = getCloudflareContext() as { env: CloudflareEnv };
   await env.R2.put(key, bytes, { httpMetadata: { contentType: "application/pdf" } });
   
   return { key, title, id: Number(f.get("id") || 0) };
@@ -102,7 +103,8 @@ async function handle(req: NextRequest, path: string) {
         : await db.prepare("SELECT file FROM projects WHERE id=? AND (email=? OR ?=1)").bind(id, u.email, admin ? 1 : 0).first();
       
       if (!row) reject(404, "File unavailable.");
-      const { env } = getCloudflareContext();
+      // FIX: Added type cast here
+      const { env } = getCloudflareContext() as { env: CloudflareEnv };
       const obj = await env.R2.get(row.file);
       if (!obj) reject(404, "File missing.");
       

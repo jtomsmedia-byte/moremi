@@ -1,0 +1,3 @@
+export const production = {"APP_ORIGIN":"http://localhost:3000","SMTP_URL":"smtp://elias.ohara55@ethereal.email:JdPcX8R7YMHDKNpvme@smtp.ethereal.email:587","MAIL_FROM":"Moremi Programme <team@example.org>","OTP_SECRET":"b68c52e469b66ff9231ae75123e015fe31c336d7c2017a679f626c68343ef236","COHORT_START":"2026-11-02","DATA_DIR":"./.data","FOUNDER_VIDEO_URL":""};
+export const development = {"APP_ORIGIN":"http://localhost:3000","SMTP_URL":"smtp://elias.ohara55@ethereal.email:JdPcX8R7YMHDKNpvme@smtp.ethereal.email:587","MAIL_FROM":"Moremi Programme <team@example.org>","OTP_SECRET":"b68c52e469b66ff9231ae75123e015fe31c336d7c2017a679f626c68343ef236","COHORT_START":"2026-11-02","DATA_DIR":"./.data","FOUNDER_VIDEO_URL":""};
+export const test = {};
